@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(216, 216, 247);
+}
+form{
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.mynav{
+    background-color: rgb(218, 213, 209);
+    
+    
+}
+
+
+
+#sample{
+    text-align: center;
+    border: black 5px;
+}
+
+#caption{
+    text-align: center;
+
+}
+
+#janedoe{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.row{
+    text-align: center;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.table{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a{
+    color: powderblue;
+}
+footer{
+    background-color: rebeccapurple;
+}
+
