@@ -1,4 +1,4 @@
-FROM php: 7.4-apache
+FROM php:7.4-apache
 
 LABEL maintainer="Katie-Jane Price"
 
