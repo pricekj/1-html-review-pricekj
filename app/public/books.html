@@ -24,7 +24,7 @@
         </div>
       </nav>
 <h2>The New York Times Bestsellers</h2>
-<table class="table table-dark">
+<table id="taskTable" class="table table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -109,6 +109,11 @@
   </form>
 </br>
 </table>
+<script src="js/tablesort.min.js"></script>
+<script>
+  // Tablesort plugin from http://tristen.ca/tablesort/demo/
+  new Tablesort(document.getElementById('taskTable'));
+</script>
 </body>
 <footer>
   
