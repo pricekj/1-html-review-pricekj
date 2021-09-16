@@ -26,7 +26,7 @@
   
    <p id="janedoe"><img src="img/janedoe.jpg" alt="Jane Doe" width="110" height="150"></p>
   
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col">
         Name
@@ -68,7 +68,31 @@
       </div>
     </div>
     
-  </div>
+  </div> -->
+ 
+      <div id="usern" class="col col-8">
+      
+        <p> name: {{ username }}</p>
+        <p> Country: {{ usercountry }}</p>
+        <p> Birthdate: {{ userdob }}</p>
+        <p> Age: {{ userage }}</p>
+        <p> Email: <a v-bind:href="'mailto:'person.email"></a>{{ useremail }}</p>
+        
+        
+        <!-- <ul v-for="row in offers">
+          <li>{{ row.name }} - {{row.salary}}</li>
+        </ul> -->
+
+
+
+      </div>
+      
+
+    
+
+
+  <script src="js/profile.app.js"></script> <!-- link page-->
+
 </body>
 <footer>
   
