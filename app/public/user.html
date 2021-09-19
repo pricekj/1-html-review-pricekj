@@ -4,6 +4,8 @@
   <title>User</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/site.css">
+
+  
 </head>
 <body>
 <nav class="mynav navbar navbar-expand-lg navbar-light border-bottom border-dark">
@@ -24,73 +26,22 @@
   </nav>
   <h2>Say Hello to our Random User</h2>
   
-   <p id="janedoe"><img src="img/janedoe.jpg" alt="Jane Doe" width="110" height="150"></p>
-  
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col">
-        Name
-      </div>
-      <div class="col">
-        Jane Doe
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        Country
-      </div>
-      <div class="col">
-        USA
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        Birthdate
-      </div>
-      <div class="col">
-        August 18th, 1998
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        Age
-      </div>
-      <div class="col">
-        23
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        Email Address
-      </div>
-      <div class="col">
-        <a href = "mailto:janedoe@gmail.com">janedoe@gmail.com</a>
-      </div>
-    </div>
-    
-  </div> -->
- 
-      <div id="usern" class="col col-8">
+      <div class="col col-8" id="usern">
+
+        <a href="https://randomuser.me/"><img v-bind:src="userpic" alt="Jane Doe" width="110" height="150"></a>
       
         <p> name: {{ username }}</p>
         <p> Country: {{ usercountry }}</p>
-        <p> Birthdate: {{ userdob }}</p>
+        <p> Birthdate: {{ userdob[0] + userdob[1] + userdob[2] + userdob[3] + "/" + userdob[5] + userdob[6] + "/" + userdob[8] + userdob[9] }}</p>
         <p> Age: {{ userage }}</p>
-        <p> Email: <a v-bind:href="'mailto:'person.email"></a>{{ useremail }}</p>
+        <p> Email: <a v-bind:href="'mailto:' + useremail">{{ useremail }}</a></p>
         
         
-        <!-- <ul v-for="row in offers">
-          <li>{{ row.name }} - {{row.salary}}</li>
-        </ul> -->
-
-
-
       </div>
+
       
 
-    
-
-
+  <script src="https://unpkg.com/vue@next"></script>
   <script src="js/profile.app.js"></script> <!-- link page-->
 
 </body>
