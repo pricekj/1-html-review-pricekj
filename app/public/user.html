@@ -27,20 +27,22 @@
   <h2>Say Hello to our Random User</h2>
   
       <div class="col col-8" id="usern">
-
-        <a href="https://randomuser.me/"><img v-bind:src="userpic" alt="Jane Doe" width="110" height="150"></a>
+        <form  v-on:submit.prevent="fetchUserData"> <!-- refreshes within the page, not refressing the whole page --> 
+        <a v-bind:href="userpic"><img class="profilepic" v-bind:src="userpic" alt="Jane Doe" width="110" height="150"></a>
       
         <p> name: {{ username }}</p>
         <p> Country: {{ usercountry }}</p>
         <p> Birthdate: {{ userdob[0] + userdob[1] + userdob[2] + userdob[3] + "/" + userdob[5] + userdob[6] + "/" + userdob[8] + userdob[9] }}</p>
+        <p> Birthday: {{ prettyBirthday }}</p>
         <p> Age: {{ userage }}</p>
         <p> Email: <a v-bind:href="'mailto:' + useremail">{{ useremail }}</a></p>
         
-        
+        <button type="submit"> Refresh </button>
+      </form>
       </div>
 
       
-
+      <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="js/profile.app.js"></script> <!-- link page-->
 
