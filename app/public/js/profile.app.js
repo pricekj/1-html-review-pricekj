@@ -12,7 +12,9 @@
     computed: {
         prettyBirthday() {
             // return this.dob;
-            return dayjs(this.dob.date)
+            console.log(this.dob);
+            console.log(this.dob.date)
+            return dayjs(this.dob)
             .format('D MMM YYYY')
         }
     },
@@ -23,6 +25,7 @@
             .then(data =>  {
                 var userdata = data.results[0];
                 this.dob = userdata.dob.date;
+                console.log(this.dob);
                 console.log(userdata)
                 this.username = userdata.name.first + " " + userdata.name.last;
                 this.usercountry = userdata.location.country;
