@@ -6,14 +6,14 @@
              useremail: '',
              userdob: '',
              userage: '',
-             dob:''
+             dob:'',
+             userpic: ''
         }
     },
     computed: {
         prettyBirthday() {
             // return this.dob;
             console.log(this.dob);
-            console.log(this.dob.date)
             return dayjs(this.dob)
             .format('D MMM YYYY')
         }
