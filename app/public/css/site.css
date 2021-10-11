@@ -1,3 +1,23 @@
+.student {
+    margin: 10px 2px;
+    padding: 4px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+}
+
+.selected {
+    background-color: burlywood;
+}
+
+.userName {
+    font-weight:bold;
+}
+
+.studentName{
+    color:#999;
+}
+
+
 body{
     background-color: rgb(216, 216, 247);
 }
@@ -85,3 +105,6 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	border-radius: 50%;
 	margin:auto;
 }
+
+
+
