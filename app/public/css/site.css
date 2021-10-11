@@ -25,6 +25,7 @@ form{
     background-color: rgb(247, 236, 248);
     margin-left: 5px;
     margin-right: 5px;
+    color: black;
     
 }
 
@@ -33,8 +34,6 @@ form{
     
     
 }
-
-
 
 #sample{
     text-align: center;

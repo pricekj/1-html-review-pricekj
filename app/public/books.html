@@ -22,12 +22,12 @@
             <li class="nav-item active">
               <a class="nav-link" href="user.html">User <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="class.html">Class <span class="sr-only">(current)</span></a>
+            </li>
           </ul>
         </div>
       </nav>
-
-      
-      
 
 <h2>The New York Times Bestsellers</h2>
 
@@ -56,95 +56,48 @@
           </tr>
       </tbody>
     </table>
+    <form v-on:submit.prevent="postNewBook">
+      <div class="form-group">
+        <label for="exampleBookTitle">Book Title</label>
+        <input type="text" v-model="booksForm.title" class="form-control" id="exampleBookTitle">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleAuthor">Author</label>
+        <input type="text" v-model="booksForm.author" class="form-control" id="exampleAuthor">
+      </div>
+      <div class="form-group">
+        <label for="exampleYearPublished">Year Published</label>
+        <input type="number" v-model="booksForm.published" class="form-control" id="exampleYearPublished">
+      </div>
+      <div class="form-group">
+        <label for="examplePublishingCompany">Publishing Company</label>
+        <input type="text" v-model="booksForm.publisher" class="form-control" id="examplePublishingCompany">
+      </div>
+      <div class="form-group">
+        <label for="examplePageCount">Page Count</label>
+        <input type="number" v-model="booksForm.pages" class="form-control" id="examplePageCount">
+      </div>
+      <div class="form-group">
+        <label for="exampleMSRP">MSRP</label>
+        <input type="number" v-model="booksForm.msrp" class="form-control" id="exampleMSRP" >
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
-
-
-
-<!-- <table id="taskTable" class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Title</th>
-      <th scope="col">Author</th>
-      <th scope="col">Year Published</th>
-      <th scope="col">Publisher</th>
-      <th scope="col">Page Count</th>
-      <th scope="col">MSRP</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Bloodless</td>
-      <td>Douglas Preston and Lincoln Child</td>
-      <td>2021</td>
-      <td>Grand Central Publishing</td>
-      <td>400</td>
-      <td>$29.00</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Billy Summers</td>
-      <td>Stephen King</td>
-      <td>2021</td>
-      <td>Scribner</td>
-      <td>528</td>
-      <td>$30.00</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Complications</td>
-      <td>Danielle Steel</td>
-      <td>2021</td>
-      <td>Delacorte Press</td>
-      <td>256</td>
-      <td>$28.99</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>The Noise</td>
-      <td>James Patterson</td>
-      <td>2021</td>
-      <td>Little, Brown and Company</td>
-      <td>432</td>
-      <td>$28.00</td>
-    </tr>
-  </tbody>
-  </table> -->
   </body>
 </br>
-  <h3>Add Book to List</h3>
-  <form>
-    <div class="form-group">
-      <label for="exampleBookTitle">Book Title</label>
-      <input type="text" class="form-control" id="exampleBookTitle">
-      
-    </div>
-    <div class="form-group">
-      <label for="exampleAuthor">Author</label>
-      <input type="text" class="form-control" id="exampleAuthor">
-    </div>
-    <div class="form-group">
-      <label for="exampleYearPublished">Year Published</label>
-      <input type="number" class="form-control" id="exampleYearPublished">
-    </div>
-    <div class="form-group">
-      <label for="examplePublishingCompany">Publishing Company</label>
-      <input type="text" class="form-control" id="examplePublishingCompany">
-    </div>
-    <div class="form-group">
-      <label for="examplePageCount">Page Count</label>
-      <input type="number" class="form-control" id="examplePageCount">
-    </div>
-    <div class="form-group">
-      <label for="exampleMSRP">MSRP</label>
-      <input type="number" min="0.01" step="0.01" class="form-control" id="exampleMSRP" placeholder="USD $">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  
 </br>
 </table>
+
+
+
+
+</br> 
+
+
+
 <script src="js/tablesort.min.js"></script>
 <!-- <script>
   // Tablesort plugin from http://tristen.ca/tablesort/demo/
