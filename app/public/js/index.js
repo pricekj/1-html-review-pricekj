@@ -145,7 +145,7 @@ const SomeApp = {
     postEditBook(evt) {
       this.booksForm.id = this.selectedBook.id;       
       
-      console.log("Editing!", this.booksOffer);
+      console.log("Editing!", this.booksForm);
 
       fetch('api/books/update.php', {
           method:'POST',
@@ -161,12 +161,12 @@ const SomeApp = {
           this.books = json;
           
           // reset the form
-          this.handleResetEdit();
+          this.handleResetEditBook();
         });
     },
         //delete book
     postDeleteBook(bk) {  
-      if ( !confirm("Are you sure you want to delete the offer from " + bk.title + "?") ) {
+      if ( !confirm("Are you sure you want to delete this book: " + bk.title + "?") ) {
           return;
       }  
       
@@ -186,7 +186,7 @@ const SomeApp = {
           this.books = json;
           
           // reset the form
-          this.handleResetEditBooks();
+          this.handleResetEditBook();
         });
     },
       /// new offer
@@ -231,7 +231,7 @@ const SomeApp = {
             this.books = json;
             
             // reset the form
-            this.handleResetEditBooks();
+            this.handleResetEditBook();
           });
       },
 
