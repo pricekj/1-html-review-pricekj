@@ -9,7 +9,8 @@ const SomeApp = {
       offerForm: {},
       booksForm: {},
       selectedOffer: null,
-      selectedBook: null
+      selectedBook: null,
+      offer: []
     }
   },
   computed: {},

@@ -47,9 +47,9 @@ $stmt->execute([
 // just in case the data changed by entering it
 header('HTTP/1.1 303 See Other');
 header('Location: ../offer/?student=' . $_POST['studentId']);
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
+// © 2021 GitHub, Inc.
+// Terms
+// Privacy
+// Security
+// Status
+// Docs
