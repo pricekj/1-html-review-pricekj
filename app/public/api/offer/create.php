@@ -32,7 +32,7 @@ $db = DbConnection::getConnection();
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
   'INSERT INTO offer (studentId, companyName, salary, bonus, offerDate)
-  VALUES (?, ?, ?, ?, ?)'
+  VALUES (?, ?, ?, ?, ?, ?)'
 );
 
 $stmt->execute([
@@ -40,7 +40,8 @@ $stmt->execute([
   $_POST['companyName'],
   $_POST['salary'],
   $_POST['bonus'],
-  $_POST['offerDate']
+  $_POST['offerDate'],
+  $_POST['status']
 ]);
 
 // Get auto-generated PK from DB
